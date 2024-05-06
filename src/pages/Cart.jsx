@@ -14,8 +14,13 @@ const Cart = () => {
     if(cartItems.length === 0){
       toast.error("Your cart is empty");
     }else{
-      navigate("/thank-you");
+      //navigate("/thank-you");
+      navigate("/checkout");
     }
+  }
+
+  const goToHome=()=>{
+    navigate("/")
   }
 
   return (
@@ -28,9 +33,14 @@ const Cart = () => {
         <div className='lg:col-span-4 lg:pl-4'>
           <CartTotals />
           {loginState ? (
-            <button onClick={isCartEmpty} className='btn bg-blue-600 hover:bg-blue-500 text-white btn-block mt-8'>
-              order now
-            </button>
+            <>
+              <button onClick={isCartEmpty} className='btn bg-blue-600 hover:bg-blue-500 text-white btn-block mt-8'>
+                proceed to checkout
+              </button>
+              <button onClick={goToHome} className='btn bg-blue-600 hover:bg-blue-500 text-white btn-block mt-8'>
+                Continue Shopping
+              </button>
+            </>
           ) : (
             <Link to='/login' className='btn bg-blue-600 hover:bg-blue-500 btn-block text-white mt-8'>
               please login
