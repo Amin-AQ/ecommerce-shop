@@ -19,6 +19,7 @@ import { landingLoader } from "./pages/Landing";
 import { singleProductLoader } from "./pages/SingleProduct";
 import { shopLoader } from "./pages/Shop";
 import { ToastContainer } from "react-toastify";
+import Checkout from "./pages/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -84,6 +85,10 @@ const router = createBrowserRouter([
       {
         path:"order-history",
         element: <OrderHistory />
+      },
+      {
+        path:"checkout",
+        element:<Checkout/>
       }
     ],
   },
