@@ -1,9 +1,15 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice";
+import { toast } from "react-toastify";
+import { FaCartShopping } from "react-icons/fa6";
+
+
 
 const ProductElement = ({ id, title, image, rating, price, brandName }) => {
+  const dispatch = useDispatch();
+  const loginState = useSelector((state) => state.auth.isLoggedIn);
   const product = {
     id, title, image, rating, price, brandName, amount: 1
   };
@@ -25,6 +31,22 @@ const ProductElement = ({ id, title, image, rating, price, brandName }) => {
           </Link>
           <div className="flex items-center justify-between">
             <span className="text-3xl font-bold text-accent-content">${price}</span>
+            <button
+              className="btn bg-blue-600 hover:bg-blue-500 text-white"
+              onClick={() => {
+                if (loginState) {
+                  dispatch(addToCart(product));
+                } else {
+                  toast.error(
+                    "You must be logged in to add products to the cart"
+                  );
+                }
+              }}
+            >
+              <FaCartShopping className="text-xl mr-1" />
+              Add to cart
+            </button>
+
           </div>
         </div>
       </div>
