@@ -1,9 +1,7 @@
 import React from "react";
 import { FaSquareXTwitter, FaSquareFacebook, FaSquareInstagram, FaSquareYoutube } from "react-icons/fa6";
-import { useSelector } from "react-redux";
 
 const Footer = () => {
-  const loginState = useSelector((state) => state.auth.isLoggedIn);
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10 max-md:px-0">
       <div className="grid grid-cols-2 gap-10">
