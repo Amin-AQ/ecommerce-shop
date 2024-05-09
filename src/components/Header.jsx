@@ -58,28 +58,16 @@ const Header = () => {
       <div className="topbar border-b border-gray-800">
         <ul>
           <li>
-            <FaHeadphones className="text-2xl max-sm:text-lg text-accent-content" />
             <span className="text-2xl max-sm:text-lg text-accent-content">
-              +381 61/123-456
-            </span>
-          </li>
-          <li>
-            <FaRegEnvelope className="text-2xl max-sm:text-lg text-accent-content" />{" "}
-            <span className="text-2xl max-sm:text-lg text-accent-content">
-              support@test.com
+            
+              <strong><Link to="/">CLOTHING & SPORTS WEAR</Link></strong>
             </span>
           </li>
         </ul>
       </div>
       <div className="navbar bg-base-100 max-w-7xl mx-auto">
         <div className="flex-1">
-          <Link
-            to="/"
-            className="btn btn-ghost normal-case text-2xl font-black text-accent-content"
-          >
-            <AiFillShopping />
-            Kuzma Clothing & Shoes
-          </Link>
+          
         </div>
         <div className="flex-none">
           <Link

@@ -27,3 +27,4 @@ export { default as RatingPercentage } from "./RatingPercentage";
 export { default as BrandList } from "./BrandList"; 
 export { default as BrandCard } from "./BrandCard";
 export { default as BrandProducts } from "./BrandProducts"; 
+export { default as ImageCarousel } from "./ImageCarousel";
