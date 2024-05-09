@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import "../styles/Landing.css";
-import { Hero, ProductElement, Stats } from "../components";
+import { Hero, ProductElement, Stats, BrandList
+  
+ } from "../components";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import axios from "axios";
+
 
 export const landingLoader = async () => {
   const response = await axios(
@@ -21,8 +24,10 @@ const Landing = () => {
     <main>
       <Hero />
       <Stats />
-
       <div className="selected-products">
+        <div>
+          <BrandList products={products}/> 
+        </div>
         <h2 className="text-6xl text-center my-12 max-md:text-4xl text-accent-content">
           Trending Products
         </h2>

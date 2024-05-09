@@ -1,0 +1,20 @@
+.Card {
+    text-align: center;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .brand-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .name {
+    margin-top: 10px;
+    margin-right: 80px;
+  }
+  

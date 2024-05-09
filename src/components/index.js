@@ -24,3 +24,6 @@ export { default as FormDatePicker } from "./FormDatePicker";
 export { default as SingleProductReviews } from "./SingleProductReviews";
 export { default as SingleReview } from "./SingleReview";
 export { default as RatingPercentage } from "./RatingPercentage";
+export { default as BrandList } from "./BrandList"; 
+export { default as BrandCard } from "./BrandCard";
+export { default as BrandProducts } from "./BrandProducts"; 

@@ -15,6 +15,8 @@ import {
   ThankYou,
   OrderHistory
 } from "./pages";
+import { BrandProducts } from "./components";
+import { BrandPageLoader } from "./components/BrandProducts";
 import { landingLoader } from "./pages/Landing";
 import { singleProductLoader } from "./pages/SingleProduct";
 import { shopLoader } from "./pages/Shop";
@@ -42,6 +44,11 @@ const router = createBrowserRouter([
         element: <SingleProduct />,
         loader: singleProductLoader,
       },
+      { 
+        path: "shop/brand/:brandName", 
+        element: <BrandProducts/>, 
+        loader: BrandPageLoader, 
+      }, 
       {
         path: "about",
         element: <About />,
