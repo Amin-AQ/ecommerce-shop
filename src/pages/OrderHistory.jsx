@@ -14,7 +14,6 @@ const OrderHistory = () => {
 
   const getOrderHistory = async () => {
     try {
-      // saljemo get(default) request
       const response = await axios.get("http://localhost:8080/orders");
       const data = response.data;
       setOrders(

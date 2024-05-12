@@ -1,9 +1,15 @@
 .Card {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .card-content {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+    align-items: center;
+    text-align: center;
   }
   
   .brand-image {
@@ -15,6 +21,5 @@
   
   .name {
     margin-top: 10px;
-    margin-right: 80px;
   }
   

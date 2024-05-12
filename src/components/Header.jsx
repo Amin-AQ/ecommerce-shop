@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaHeadphones } from "react-icons/fa6";
-import { FaRegEnvelope } from "react-icons/fa6";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
-import { FaHeart } from "react-icons/fa6";
-import { AiFillShopping } from "react-icons/ai";
 import { FaSun } from "react-icons/fa6";
 import { FaMoon } from "react-icons/fa6";
 import { FaWindowClose } from "react-icons/fa";
@@ -12,9 +8,7 @@ import { FaWindowClose } from "react-icons/fa";
 import "../styles/Header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { changeMode } from "../features/auth/authSlice";
-import { store } from "../store";
-import axios from "axios";
-import { clearWishlist, updateWishlist } from "../features/wishlist/wishlistSlice";
+
 
 const Header = () => {
   const { amount } = useSelector((state) => state.cart);
@@ -27,29 +21,9 @@ const Header = () => {
   const loginState = useSelector((state) => state.auth.isLoggedIn);
 
 
-  const fetchWishlist = async () => {
-    if(loginState){
-      try {
-        const getResponse = await axios.get(`http://localhost:8080/user/${localStorage.getItem("id")}`);
-        const userObj = getResponse.data;
-  
-        store.dispatch(updateWishlist({userObj}));
-        
-       
-      } catch (error) {
-        console.error(error);
-      }
-    }else{
-      store.dispatch(clearWishlist());
-    }
-
-  };
-
 
   useEffect(() => {
     setIsLoggedIn(loginState);
-
-      fetchWishlist();
     
   }, [loginState]);
 
@@ -95,12 +69,6 @@ const Header = () => {
           >
             {darkMode ? <FaSun /> : <FaMoon />}
           </button>
-          <Link
-            to="/wishlist"
-            className="btn btn-ghost btn-circle text-accent-content"
-          >
-            <FaHeart className="text-xl" />
-          </Link>
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <div className="indicator">
@@ -214,11 +182,6 @@ const Header = () => {
                   About us
                 </NavLink>
               </li>
-              <li className="text-xl">
-                <NavLink className="text-accent-content" to="/contact">
-                  Contact
-                </NavLink>
-              </li>
               {!isLoggedIn && (
                 <>
                   <li className="text-xl">
@@ -246,9 +209,6 @@ const Header = () => {
           </NavLink>
           <NavLink className="text-accent-content" to="/about-us">
             About us
-          </NavLink>
-          <NavLink className="text-accent-content" to="/contact">
-            Contact
           </NavLink>
           {!isLoggedIn && (
             <>

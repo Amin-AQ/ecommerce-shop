@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { Footer, Header, ImageCarousel } from '../components'
+import { Footer, Header } from '../components'
 
 
 const HomeLayout = () => {

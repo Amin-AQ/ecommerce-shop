@@ -63,7 +63,6 @@ const Register = () => {
       phone,
       adress,
       password,
-      userWishlist: [],
     };
 
     if (isValidate()) {

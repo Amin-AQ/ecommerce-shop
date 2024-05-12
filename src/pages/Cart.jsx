@@ -14,7 +14,6 @@ const Cart = () => {
     if(cartItems.length === 0){
       toast.error("Your cart is empty");
     }else{
-      //navigate("/thank-you");
       navigate("/checkout");
     }
   }

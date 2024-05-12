@@ -2,14 +2,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
   About,
   Cart,
-  Contact,
   HomeLayout,
   Landing,
   Login,
   Register,
   Shop,
   SingleProduct,
-  Wishlist,
   Profile,
   Search,
   ThankYou,
@@ -62,20 +60,12 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "contact",
-        element: <Contact />,
-      },
-      {
         path: "about-us",
         element: <About />,
       },
       {
         path: "cart",
         element: <Cart />,
-      },
-      {
-        path: "wishlist",
-        element: <Wishlist />,
       },
       {
         path: "user-profile",

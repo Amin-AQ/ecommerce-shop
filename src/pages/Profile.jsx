@@ -9,7 +9,6 @@ const Profile = () => {
   const [id, setId] = useState(localStorage.getItem("id"));
   const [userData, setUserData] = useState({});
   const loginState = useSelector((state) => state.auth.isLoggedIn);
-  const wishItems = useSelector((state) => state.wishlist.wishItems);
   const [userFormData, setUserFormData] = useState({
     id: "",
     name: "",
@@ -63,8 +62,6 @@ const Profile = () => {
         phone: userFormData.phone,
         adress: userFormData.adress,
         password: userFormData.password,
-        userWishlist: await userObj.userWishlist
-        //userWishlist treba da stoji ovde kako bi sacuvao stanje liste zelja
       });
       const putData = putResponse.data;
     }catch(error){
