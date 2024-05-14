@@ -14,16 +14,16 @@ An e-commerce web application built with React, Redux, and Vite, providing a sea
 ## Screenshots
 
 ### Landing Page
-![Landing Page](./screenshots/landing.png)
+![Landing Page](./screenshots/landing.PNG)
 
 ### Shop Page
-![Shop Page](./screenshots/shop.png)
+![Shop Page](./screenshots/shop.PNG)
 
 ### Cart Page
-![Cart Page](./screenshots/cart.png)
+![Cart Page](./screenshots/cart.PNG)
 
 ### Thank You Page
-![Thank You Page](./screenshots/thankyou.png)
+![Thank You Page](./screenshots/thankyou.PNG)
 
 ## Getting Started
 
@@ -36,7 +36,7 @@ An e-commerce web application built with React, Redux, and Vite, providing a sea
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/ecommerce-shop.git
+    git clone https://github.com/Amin-AQ/ecommerce-shop.git
     cd ecommerce-shop
     ```
 
